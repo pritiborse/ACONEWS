@@ -112,25 +112,25 @@ nav h1 {
 
 /* Welcome Text */
 .welcome-text {
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0; /* Remove default margin */
-  padding: 2rem; /* Adjust padding as needed */
-  background-image: url('./waves.jpg'); /* Replace with your image URL */
-  background-size: cover; /* Cover the entire section */
-  background-position: center; /* Center the background image */
-  background-attachment: fixed; /* Fix the background image */
-  color: white; /* Ensure text is visible over the background */
-  position: relative; /* Ensure content is properly positioned */
-  z-index: 1; /* Ensure the text is above the background image */
+  margin: 0;
+  padding: 2rem;
+  background-image: url('./waves.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .welcome-text h2, .welcome-text p {
-  color: white; /* Ensure text color contrasts with background */
+  color: white;
 }
 
 /* Typewriter Text */
@@ -150,7 +150,7 @@ nav h1 {
 /* News Cards */
 .news-card {
   position: relative;
-  z-index: 2; /* Ensure news cards are above the welcome text */
+  z-index: 2;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 1.5rem;
@@ -166,8 +166,8 @@ nav h1 {
 
 /* Main Content */
 main {
-  padding: 2rem; /* Padding for main content */
-  background-color: #ffffff; /* Ensure background color */
+  padding: 2rem;
+  background-color: #ffffff;
 }
 
 /* Card Styles */

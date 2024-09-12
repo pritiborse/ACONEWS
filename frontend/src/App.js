@@ -5,7 +5,7 @@ import './App.css';
 import 'tailwindcss/tailwind.css';
 import '@fontsource/poppins';
 import '@fontsource/comfortaa';
-import Typed from 'typed.js'; // Import Typed.js for typewriter effect
+import Typed from 'typed.js';
 
 const availableCategories = ['general', 'world', 'nation', 'business', 'technology', 'entertainment', 'sports', 'science', 'health'];
 
@@ -40,7 +40,14 @@ function App() {
   const fetchNews = async () => {
     setLoading(true);
     try {
-      const endpoint = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&max=10&page=${page}&apikey=a64e8e04e195e5a00d2d44945ead87a4`;
+      let endpoint;
+      if (searchQuery) {
+        // Search-based endpoint
+        endpoint = `https://gnews.io/api/v4/search?q=${encodeURIComponent(searchQuery)}&lang=en&max=10&page=${page}&apikey=b838c5a8348b6c68af324a15388c3ff0`;
+      } else {
+        // Category-based endpoint
+        endpoint = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&max=10&page=${page}&apikey=b838c5a8348b6c68af324a15388c3ff0`;
+      }
       const response = await axios.get(endpoint);
       setArticles(response.data.articles);
     } catch (error) {
@@ -52,11 +59,12 @@ function App() {
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
-    setPage(1);
+    setPage(1); // Reset to first page on new search
   };
 
   const handleCategoryChange = (e) => {
     setCategory(e.target.value);
+    setSearchQuery(''); // Clear search when changing category
     setPage(1);
   };
 
@@ -154,9 +162,15 @@ function App() {
 
       {/* Welcome Text */}
       <div className="welcome-text">
-        <h2 className="text-2xl text-gray-800 font-semibold "><span className='font2'>Welcome to</span> <span className="font">aconews.</span></h2>
-        <p className="typewriter-text"> <span ref={typedRef} className="dynamic-text"></span></p>
-        <h2 className="text-2xl text-gray-800 font-semibold "><span className='font2'>Designed By Priti Borse (Future Acowaler😉🚀)</span></h2>
+        <h2 className="text-2xl text-gray-800 font-semibold">
+          <span className='font2'>Welcome to</span> <span className="font">aconews.</span>
+        </h2>
+        <p className="typewriter-text"> 
+          <span ref={typedRef} className="dynamic-text"></span>
+        </p>
+        <h2 className="text-2xl text-gray-800 font-semibold">
+          <span className='font2'>Designed By Priti Borse (Future Acowaler😉🚀)</span>
+        </h2>
       </div>
 
       {/* Main Content */}
