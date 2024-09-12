@@ -40,7 +40,7 @@ function App() {
   const fetchNews = async () => {
     setLoading(true);
     try {
-      const endpoint = `http://localhost:3001/news?page=${page}&search=${searchQuery}&category=${category}`;
+      const endpoint = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&max=10&page=${page}&apikey=a64e8e04e195e5a00d2d44945ead87a4`;
       const response = await axios.get(endpoint);
       setArticles(response.data.articles);
     } catch (error) {
