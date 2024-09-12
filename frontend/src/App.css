@@ -51,7 +51,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Ensures items stay in one line */
 }
 
 /* Logo styling */
@@ -67,9 +67,8 @@ nav h1 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  width: 100%;
+  flex-wrap: nowrap;
+  width: auto; /* Adjusts width to content */
 }
 
 .nav-menu input, .nav-menu select {
@@ -80,7 +79,7 @@ nav h1 {
 
 .nav-menu .search-container {
   position: relative;
-  width: 100%;
+  width: auto; /* Adjusts width to content */
 }
 
 .nav-menu .search-container input {
@@ -207,11 +206,13 @@ article a:hover {
 }
 
 /* Pagination Styles */
+/* Pagination Styles */
 footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
   margin-top: 2rem;
+  flex-wrap: wrap; /* Allows wrapping if needed */
 }
 
 footer button {
@@ -227,6 +228,14 @@ footer button {
 footer button:hover {
   background-color: #334fb8;
 }
+
+footer p {
+  margin: 0; /* Remove default margin */
+  color: #333;
+  font-size: 1rem;
+  margin-left: 1rem; /* Add spacing between buttons and text */
+}
+
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -247,7 +256,7 @@ footer button:hover {
     justify-content: center;
   }
 
-  nav input, nav select, nav button {
+  .nav-menu input, .nav-menu select, .nav-menu button {
     width: 100%;
     max-width: none;
     margin-bottom: 1rem;
@@ -268,19 +277,29 @@ footer button:hover {
 }
 
 /* Extra small devices */
-@media (max-width: 480px) {
-  nav h1 {
-    font-size: 1.2rem;
+@media (max-width: 500px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  button {
-    padding: 0.5rem;
+  .nav-menu input, .nav-menu select, .nav-menu button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-menu button {
+    border-radius: 10px;
+  }
+
+  .welcome-text {
+    padding: 1rem;
     font-size: 0.9rem;
   }
 
   article {
+    margin: 0.5rem 0;
     padding: 1rem;
-    margin: 0.5rem;
   }
 
   article h2 {
@@ -292,7 +311,7 @@ footer button:hover {
   }
 
   footer button {
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
 }

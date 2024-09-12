@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.49c8ad06.css",
-    "main.js": "/static/js/main.fb2dcca6.js",
+    "main.css": "/static/css/main.f068dc99.css",
+    "main.js": "/static/js/main.19206460.js",
     "static/js/400.c4d4ea34.chunk.js": "/static/js/400.c4d4ea34.chunk.js",
     "static/media/waves.jpg": "/static/media/waves.3dcc4eb6dd9f12b0aca3.jpg",
     "static/media/comfortaa-latin-400-normal.woff": "/static/media/comfortaa-latin-400-normal.cd0a3fbb7381a2544cfd.woff",
@@ -21,12 +21,12 @@
     "static/media/poppins-latin-ext-400-normal.woff2": "/static/media/poppins-latin-ext-400-normal.6f94f40f848d79872444.woff2",
     "static/media/comfortaa-vietnamese-400-normal.woff2": "/static/media/comfortaa-vietnamese-400-normal.0d58e24f7952f7a12061.woff2",
     "index.html": "/index.html",
-    "main.49c8ad06.css.map": "/static/css/main.49c8ad06.css.map",
-    "main.fb2dcca6.js.map": "/static/js/main.fb2dcca6.js.map",
+    "main.f068dc99.css.map": "/static/css/main.f068dc99.css.map",
+    "main.19206460.js.map": "/static/js/main.19206460.js.map",
     "400.c4d4ea34.chunk.js.map": "/static/js/400.c4d4ea34.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.49c8ad06.css",
-    "static/js/main.fb2dcca6.js"
+    "static/css/main.f068dc99.css",
+    "static/js/main.19206460.js"
   ]
 }
