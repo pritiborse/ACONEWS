@@ -1,0 +1,291 @@
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Custom font for ACONEWS */
+.font-comfortaa {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 900;
+}
+.font {
+  color: blue;
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 900;
+}
+.font2 {
+  color: black;
+}
+
+/* App container styles */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* Input and select styles */
+input, select {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Navbar styles */
+nav {
+  background-color: #1e3a8a;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo styling */
+nav h1 {
+  font-size: 2rem;
+  font-family: 'Comfortaa', sans-serif;
+  color: white;
+}
+
+/* Navbar content styles */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav-menu input, .nav-menu select {
+  margin-right: 1rem;
+  flex-grow: 1;
+  max-width: 250px;
+}
+
+.nav-menu .search-container {
+  position: relative;
+  width: 100%;
+}
+
+.nav-menu .search-container input {
+  padding-right: 2.5rem;
+}
+
+.nav-menu .search-container .search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.nav-menu button {
+  background-color: #1e3a8a;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-menu button:hover {
+  background-color: #334fb8;
+}
+
+/* Remove circular styling and fix button size */
+.nav-menu button.signup-btn {
+  border-radius: 5px;
+}
+
+.nav-menu button.login-btn {
+  border-radius: 5px;
+}
+
+/* Welcome Text */
+.welcome-text {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0; /* Remove default margin */
+  padding: 2rem; /* Adjust padding as needed */
+  background-image: url('./waves.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Fix the background image */
+  color: white; /* Ensure text is visible over the background */
+  position: relative; /* Ensure content is properly positioned */
+  z-index: 1; /* Ensure the text is above the background image */
+}
+.welcome-text h2, .welcome-text p {
+  color: white; /* Ensure text color contrasts with background */
+}
+
+/* Typewriter Text */
+.typewriter-text {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* Dynamic Text Animation */
+.dynamic-text {
+  display: inline-block;
+  color: blue;
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 900;
+}
+
+/* News Cards */
+.news-card {
+  position: relative;
+  z-index: 2; /* Ensure news cards are above the welcome text */
+}
+
+.news-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main {
+  padding: 2rem; /* Padding for main content */
+  background-color: #ffffff; /* Ensure background color */
+}
+
+/* Card Styles */
+article {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1);
+}
+
+article h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+article p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+article a {
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+article a:hover {
+  text-decoration: underline;
+}
+
+/* Pagination Styles */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+footer button:hover {
+  background-color: #334fb8;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav input, nav select, nav button {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+
+  article {
+    margin: 1rem 0.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  article {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  article h2 {
+    font-size: 1.1rem;
+  }
+
+  article p {
+    font-size: 0.9rem;
+  }
+
+  footer button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
