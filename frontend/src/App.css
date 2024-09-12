@@ -12,11 +12,13 @@ body {
   font-family: 'Comfortaa', sans-serif;
   font-weight: 900;
 }
+
 .font {
   color: blue;
   font-family: 'Comfortaa', sans-serif;
   font-weight: 900;
 }
+
 .font2 {
   color: black;
 }
@@ -57,6 +59,7 @@ nav h1 {
   font-size: 2rem;
   font-family: 'Comfortaa', sans-serif;
   color: white;
+  margin: 0;
 }
 
 /* Navbar content styles */
@@ -107,15 +110,6 @@ nav h1 {
   background-color: #334fb8;
 }
 
-/* Remove circular styling and fix button size */
-.nav-menu button.signup-btn {
-  border-radius: 5px;
-}
-
-.nav-menu button.login-btn {
-  border-radius: 5px;
-}
-
 /* Welcome Text */
 .welcome-text {
   min-height: 100vh; /* Full viewport height */
@@ -134,6 +128,7 @@ nav h1 {
   position: relative; /* Ensure content is properly positioned */
   z-index: 1; /* Ensure the text is above the background image */
 }
+
 .welcome-text h2, .welcome-text p {
   color: white; /* Ensure text color contrasts with background */
 }
@@ -156,6 +151,12 @@ nav h1 {
 .news-card {
   position: relative;
   z-index: 2; /* Ensure news cards are above the welcome text */
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 
 .news-card.fade-in {
@@ -163,6 +164,7 @@ nav h1 {
   transform: translateY(0);
 }
 
+/* Main Content */
 main {
   padding: 2rem; /* Padding for main content */
   background-color: #ffffff; /* Ensure background color */
@@ -209,6 +211,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 
 footer button {
@@ -257,6 +260,10 @@ footer button:hover {
 
   article {
     margin: 1rem 0.5rem;
+  }
+
+  .welcome-text {
+    padding: 1rem;
   }
 }
 
